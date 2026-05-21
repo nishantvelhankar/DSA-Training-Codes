@@ -1,97 +1,64 @@
-#wipro questions
-# import math
-# noOfPlot = int(input("Enter the no. of plot: "))
-# plots = input("Enter plots(space separated): ")
-# list  = []
-# for i in plots.split():
-#     root = math.sqrt(int(i))
-#     if root == int(root):
-#         list.append(int(i))
-
-# print("Total eligible plots = ",len(list))
-
-
-# def func(value,values):
-#  var=1
-#  values[0]=44
-# t= 3
-# v = [1,2,3]
-# func(t,v)
-# print(t,v[0])
-
-# def f(i,values=[]):
-#     values.append(i)
-#     print(values)
-#     # return values
-# f(1)
-# f(2)
-# f(3)
+#remove leading zeros from a list of integers
+# def remzerosright(arr):
+#     i=0
+#     while i<len(arr) and i==arr[0]:
+#         arr.pop(0)
+#     return arr
+   
+# arr=[0,0,1,2,4,0,5,0]
+# print(remzerosright(arr))
 
 
 
-# s = "Learning Python is very easy"
-# n = len(s)
-# print("Forward direction:")
-# i = 0
-# while i < n:
-#     print(s[i], end="")
-#     i += 1
-# print("\n\nBackward direction:")
-# i = n - 1
-# while i >= 0:
-#     print(s[i], end="")
-#     i -= 1
+# Find the first Missing Positive Integer:
+
+# def missingposi():
+#   i=0
+#   while i<len(arr)and i==arr[0]:
+#     arr.insert(i)
 
 
-# # problem :
-# x,y,z = map(int,(input().split()))
-# mylist=[]
-# for i in range(x):
-#     a=int(input())
-#     mylist.append(a)
-# for j in mylist:
-#     if j>=y and j<=z:
-#         print(j,end=' ')
+# arr=[3,4,-1,-1]
+# print(missingposi(arr))
 
+#exception handling
+# import logging
+# logging.basicConfig(filename='newlog.txt',level=logging.DEBUG)
+# try:
+#    a = int(input("Enter first number : " ))
+#    b = int(input("Enter second number: "))
+#    print(a/b)
+# except ZeroDivisionError:
+#    print("we cant divide by zero")
+# except ValueError :
+#    print("Enter only integer value")
+# except:
+#    print('404 Not found')
+# finally:
+#    print(" I always execute")
 
-# import datetime
-# date = datetime.datetime.now()
-# print("It's now : {:%d/%m/%Y:%H:%M:%S}".format(date))
+# except(ZeroDivisionError,ValueError) as msg:
+#    print(msg)
+#    logging.exception(msg)
+# print("logging level is set up.Check 'newlog.txt' for log details . " )
 
-
-# x=['A','B','C']
-# y=['A','B','C']
-# z=[1,2,3,4]
-# print(x==y)
-# print(x==z)
-# print(x!=z)
-
-#list comprehension
-#s=[1,4,9,16,25,36,49,64,81,100]
-# val=[2**i for i in range(1,6)]
-# print(val)
-
-#dict comprehension
-# square={x:x*x for x in range(1,6)}
-# print(square)
-
-# how to read multiple values from the keybord in a single line
-# a,b=[int(x)for x in input("Enter 2 numberS : ").split()]
-# print("Produt is : ", a*b)
-
-# we can use else with for as well
-# for --------
-  #------------
-#else:
-#---------------------
-
-
-while True:
-    username = input("Enter Username: ")
-    password = input("Enter Password: ")
-    if username=='admin'and password=='admin':
-        print('login sucessfull')
-        break
-    else: 
-        print("Wrong credentials. try again..")
-
+# import csv
+# f=open("employee.csv",'a')
+# a=csv.writer(f)
+# # a.writerow(["EmpID","Emp Name","Emp Age"])
+# empid=int(input("Enter your EmpID : "))
+# empname=str(input("Enter your Name : "))
+# age=int(input("Enter your Age : "))
+# a.writerow([empid,empname,age])
+# print("file has Created")
+import csv
+f=open("student.csv",'a')
+a=csv.writer(f)
+a.writerow(["StdID","Student Name","Phy","chem","math","total","Percentage","Result"])
+# stdid=int(input("Enter your EmpID : "))
+# stdname=str(input("Enter your Name : "))
+# phymarks=int(input("Enter your  phy marks : "))
+# chemmarks=int(input("Enter your  chem marks : "))
+# mathmarks=int(input("Enter your  math marks : "))
+# a.writerow([stdid,stdname,phymarks,chemmarks,mathmarks])
+print("file has Created")
